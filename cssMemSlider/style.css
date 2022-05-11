@@ -45,8 +45,6 @@ input {
    max-width: 100%;
    overflow: hidden;
    border-radius: .5rem;
-}
-.images__list {
    display: flex;
 }
 .image {
@@ -58,11 +56,25 @@ input {
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   opacity: 0;
 }
 .image img {
    width: 100%;
    height: 100%;
    object-fit: cover;
+}
+.image:first-child {
+   transform: translateX(100%);
+}
+.image:nth-child(2) {
+   transform: translateX(0);
+}
+.image:nth-child(3) {
+   transform: translateX(-100%);
+}
+.image:nth-child(4) {
+   transform: translateX(-200%);
 }
 .labels {
    display: flex;
@@ -85,6 +97,7 @@ input {
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: all .3s;
 }
 .label span span {
    width: 60%;
@@ -92,6 +105,9 @@ input {
    background: #FFF;
    transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
    transform: scale(0);
+}
+.label:hover>span {
+   background: #000;
 }
 .texts {
    width: 100%;
@@ -102,6 +118,38 @@ input {
    width: 100%;
    flex: 0 0 auto;
    color: var(--main-color);
+   transition: all .7s;
+   opacity: 0;
+}
+.text:first-child {
+   transform: translateX(100%);
+}
+.text:nth-child(2) {
+   transform: translateX(0);
+}
+.text:nth-child(3) {
+   transform: translateX(-100%);
+}
+.text:nth-child(4) {
+   transform: translateX(-200%);
+}
+
+
+.radio:nth-child(1):checked~.texts .text:nth-child(1) {
+   transform: translateX(0);
+   opacity: 1;
+}
+.radio:nth-child(2):checked~.texts .text:nth-child(2) {
+   transform: translateX(-100%);
+   opacity: 1;
+}
+.radio:nth-child(3):checked~.texts .text:nth-child(3) {
+   transform: translateX(-200%);
+   opacity: 1;
+}
+.radio:nth-child(4):checked~.texts .text:nth-child(4) {
+   transform: translateX(-300%);
+   opacity: 1;
 }
 
 .radio:nth-child(1):checked~.labels label:nth-child(1) span span {
@@ -127,4 +175,48 @@ input {
 }
 .radio:nth-child(8):checked~.labels label:nth-child(8) span span {
    transform: scale(1);
+}
+.radio:nth-child(1):checked~.labels label:nth-child(1) {
+   pointer-events: none;
+}
+.radio:nth-child(2):checked~.labels label:nth-child(2) {
+   pointer-events: none;
+}
+.radio:nth-child(3):checked~.labels label:nth-child(3) {
+   pointer-events: none;
+}
+.radio:nth-child(4):checked~.labels label:nth-child(4) {
+   pointer-events: none;
+}
+.radio:nth-child(5):checked~.labels label:nth-child(5) {
+   pointer-events: none;
+}
+.radio:nth-child(6):checked~.labels label:nth-child(6) {
+   pointer-events: none;
+}
+.radio:nth-child(7):checked~.labels label:nth-child(7) {
+   pointer-events: none;
+}
+.radio:nth-child(8):checked~.labels label:nth-child(8) {
+   pointer-events: none;
+}
+
+
+
+
+.radio:nth-child(1):checked~.images .image:nth-child(1) {
+   transform: translateX(0);
+   opacity: 1;
+}
+.radio:nth-child(2):checked~.images .image:nth-child(2) {
+   transform: translateX(-100%);
+   opacity: 1;
+}
+.radio:nth-child(3):checked~.images .image:nth-child(3) {
+   transform: translateX(-200%);
+   opacity: 1;
+}
+.radio:nth-child(4):checked~.images .image:nth-child(4) {
+   transform: translateX(-300%);
+   opacity: 1;
 }
