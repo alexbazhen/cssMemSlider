@@ -90,6 +90,8 @@ input {
    width: 60%;
    height: 60%;
    background: #FFF;
+   transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   transform: scale(0);
 }
 .texts {
    width: 100%;
@@ -100,4 +102,29 @@ input {
    width: 100%;
    flex: 0 0 auto;
    color: var(--main-color);
+}
+
+.radio:nth-child(1):checked~.labels label:nth-child(1) span span {
+   transform: scale(1);
+}
+.radio:nth-child(2):checked~.labels label:nth-child(2) span span {
+   transform: scale(1);
+}
+.radio:nth-child(3):checked~.labels label:nth-child(3) span span {
+   transform: scale(1);
+}
+.radio:nth-child(4):checked~.labels label:nth-child(4) span span {
+   transform: scale(1);
+}
+.radio:nth-child(5):checked~.labels label:nth-child(5) span span {
+   transform: scale(1);
+}
+.radio:nth-child(6):checked~.labels label:nth-child(6) span span {
+   transform: scale(1);
+}
+.radio:nth-child(7):checked~.labels label:nth-child(7) span span {
+   transform: scale(1);
+}
+.radio:nth-child(8):checked~.labels label:nth-child(8) span span {
+   transform: scale(1);
 }
