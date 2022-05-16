@@ -114,7 +114,7 @@ body {
    margin-left: 1.875rem;
 }
 #bgp:checked~.background {   
-   background-size: auto 100%;
+   background-size: auto 115%;
 }
 #bgp:checked~.background>.wrapper {
    background: rgba(0,0,0,0.6);
