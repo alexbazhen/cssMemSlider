@@ -155,6 +155,13 @@ body {
 .image:first-child {
    transform: translateX(0);
    opacity: 0;
+   background: url('assets/doge-slider.gif') center center no-repeat;
+   background-size: cover;
+   flex-direction: column;
+   justify-content: end;
+}
+.image:first-child>p {
+   font-size: 1rem;
 }
 .image:nth-child(2) {
    transform: translateX(0);
@@ -371,6 +378,9 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
    .labels {
       order: 2;
       justify-content: end;
+   }
+   .image:first-child>p {
+      font-size: 2rem;
    }
 }
 
