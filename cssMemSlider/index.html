@@ -12,73 +12,84 @@
    <title>CSS Mem Slider</title>
 </head>
 <body>
-   <div class="wrapper">
-      <input hidden checked type="checkbox" name="bg" id="bg">
-      <header class="header">
-         <div class="header__container">
-            <div class="header__wrapper">
-               <h1 class="header__title">CSS Mem Slider</h1>
-               <div class="controls">
-                  <p class="controls__text">Фон под изображениями</p>
-                  <label class="controls__label" for="bg"><span><span></span></span></label>
-               </div>
-            </div>
-         </div>
-      </header>
-      <main class="page">
-         <section class="slider">
-            <div class="slider__container">
-               <div class="memes">
-                  <div class="memes__list">
-                     <input hidden type="radio" class="radio" checked name="memes" id="mem1">
-                     <input hidden type="radio" class="radio" name="memes" id="mem2">
-                     <input hidden type="radio" class="radio" name="memes" id="mem3">
-                     <input hidden type="radio" class="radio" name="memes" id="mem4">
-                     <div class="images">
-                        <div class="image mem0">
-                           <img src="assets/mem1.jpg" alt="#">
-                        </div>
-                        <div class="image mem1">
-                           <img src="assets/mem1.jpg" alt="#">
-                        </div>
-                        <div class="image mem2">
-                           <img src="assets/mem2.jpg" alt="#">
-                        </div>
-                        <div class="image mem3">
-                           <img src="assets/mem3.jpg" alt="#">
-                        </div>
-                        <div class="image mem4">
-                           <img src="assets/mem4.jpg" alt="#">
-                        </div>
+   <input hidden checked type="checkbox" name="bgp" id="bgp">
+   <div class="background">
+      <div class="wrapper">
+         <input hidden checked type="checkbox" name="bg" id="bg">
+         <header class="header">
+            <div class="header__container">
+               <div class="header__wrapper">
+                  <h1 class="header__title">CSS Mem Slider</h1>
+                  <div class="controls">
+                     <div class="controls__group">
+                        <p class="controls__text">Фон под слайдером</p>
+                        <label class="controls__label" id="bgslider" for="bg"><span><span></span></span></label>
                      </div>
-                     <div class="labels">
-                        <label class="label mem1" for="mem1"><span><span></span></span></label>
-                        <label class="label mem2" for="mem2"><span><span></span></span></label>
-                        <label class="label mem3" for="mem3"><span><span></span></span></label>
-                        <label class="label mem4" for="mem4"><span><span></span></span></label>
-                     </div>
-                     <div class="texts">
-                        <p class="text mem1">Mem1-Text</p>
-                        <p class="text mem2">Mem2-Text</p>
-                        <p class="text mem3">Mem3-Text</p>
-                        <p class="text mem4">Mem4-Text</p>
+                     <div class="controls__group">
+                        <p class="controls__text">Фон страницы</p>
+                        <label class="controls__label" id="bgpage" for="bgp"><span><span></span></span></label>
                      </div>
                   </div>
                </div>
             </div>
-         </section>
-      </main>
-      <footer class="footer">
-         <div class="footer__container">
-            <div class="footer__wrapper">
-               <p class="footer__text">Надеюсь, Вам понравилась моя работа! <br> А для большей атмосферности - можете включить эту
-                  прекрасную мелодию:</p>
-               <audio loop controls src="assets/music.mp3"></audio>
-               <p class="footer__copyright">Made by Alexander Bazhenov | <a target="_blank" href="https://discordapp.com/users/275351208472870912/">My
-                     Discord</a></p>
+         </header>
+         <main class="page">
+            <section class="slider">
+               <div class="slider__container">
+                  <div class="memes">
+                     <div class="memes__list">
+                        <input hidden type="radio" class="radio" checked name="memes" id="mem1">
+                        <input hidden type="radio" class="radio" name="memes" id="mem2">
+                        <input hidden type="radio" class="radio" name="memes" id="mem3">
+                        <input hidden type="radio" class="radio" name="memes" id="mem4">
+                        <div class="images">
+                           <div class="image mem0">
+                              <img src="assets/mem1.jpg" alt="#">
+                           </div>
+                           <div class="image mem1">
+                              <img src="assets/mem1.jpg" alt="#">
+                           </div>
+                           <div class="image mem2">
+                              <img src="assets/mem2.jpg" alt="#">
+                           </div>
+                           <div class="image mem3">
+                              <img src="assets/mem3.jpg" alt="#">
+                           </div>
+                           <div class="image mem4">
+                              <img src="assets/mem4.jpg" alt="#">
+                           </div>
+                        </div>
+                        <div class="labels">
+                           <label class="label mem1" for="mem1"><span><span></span></span></label>
+                           <label class="label mem2" for="mem2"><span><span></span></span></label>
+                           <label class="label mem3" for="mem3"><span><span></span></span></label>
+                           <label class="label mem4" for="mem4"><span><span></span></span></label>
+                        </div>
+                        <div class="texts">
+                           <p class="text mem1">Ох уж этот Student1...</p>
+                           <p class="text mem2">Ты не ты, когда</p>
+                           <p class="text mem3">Mem3-Text</p>
+                           <p class="text mem4">Mem4-Text</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         <footer class="footer">
+            <div class="footer__container">
+               <div class="footer__wrapper">
+                  <p class="footer__text">Надеюсь, Вам понравилась моя работа! <br> А для большей атмосферности - можете
+                     включить эту
+                     прекрасную мелодию:</p>
+                  <audio loop controls src="assets/music.mp3"></audio>
+                  <p class="footer__copyright">Made by Alexander Bazhenov | <a target="_blank"
+                        href="https://discordapp.com/users/275351208472870912/">My
+                        Discord</a></p>
+               </div>
             </div>
-         </div>
-      </footer>
+         </footer>
+      </div>
    </div>
 </body>
 </html>

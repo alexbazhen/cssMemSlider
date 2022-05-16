@@ -7,9 +7,12 @@
 * {
    font-family: 'Oswald', sans-serif;
 }
-body {   
-   background: url('assets/dogebg.jpg') center center no-repeat;
-   background-size: cover;
+.background {      
+	min-height: 100vh;
+   scroll-behavior: smooth;
+   background: url('assets/dogebg.jpg') center center no-repeat;   
+   background-size: auto 0;
+   transition: all .5s;
 }
 .wrapper {
    scroll-behavior: smooth;
@@ -32,7 +35,7 @@ body {
    display: flex;
    justify-content: space-around;
    column-gap: 1.5rem;
-   row-gap: .2rem;
+   row-gap: .8rem;
    align-items: center;
    flex-wrap: wrap;
 }
@@ -45,7 +48,15 @@ body {
 }
 .controls {
    display: flex;
-   gap: 1rem;
+   gap: 1.2rem;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   row-gap: .2rem;
+}
+.controls__group {
+   display: flex;
+   gap: .8rem;
    align-items: center;
 }
 .controls__text {
@@ -83,14 +94,23 @@ body {
    border-radius: 100%;
    transition: all .2s ease-in-out;
 }
-#bg:checked~.header .controls__label>span {
+#bg:checked~.header #bgslider>span {
    background: #FFD700;
 }
-#bg:checked~.header .controls__label>span>span {
+#bg:checked~.header #bgslider>span>span {
    margin-left: 1.875rem;
 }
 #bg:checked~.page .image:first-child {
    opacity: 1 !important;
+}
+#bgp:checked~.background #bgpage>span {
+   background: #FFD700;
+}
+#bgp:checked~.background #bgpage>span>span {
+   margin-left: 1.875rem;
+}
+#bgp:checked~.background {   
+   background-size: auto 100%;
 }
 .memes {
    display: flex;
