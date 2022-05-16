@@ -1,11 +1,14 @@
 /* Start Styles */
 :root {
-   --bg-color: rgb(71, 67, 67);
+   --bg-color: #3E4757;
    --main-color: #FFF;
-   --accent-color: #FFD700;
+   --accent-color: #FFDD2D;
 }
 * {
    font-family: 'Oswald', sans-serif;
+}
+body {
+   background-color: var(--bg-color);
 }
 .background {      
 	min-height: 100vh;
@@ -20,7 +23,8 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-   background: rgba(0,0,0,.6);
+   background: rgba(0,0,0,0);
+   transition: all .7s;
 }
 [class*="__container"] {
    box-sizing: content-box;
@@ -111,6 +115,9 @@
 }
 #bgp:checked~.background {   
    background-size: auto 100%;
+}
+#bgp:checked~.background>.wrapper {
+   background: rgba(0,0,0,0.6);
 }
 .memes {
    display: flex;
